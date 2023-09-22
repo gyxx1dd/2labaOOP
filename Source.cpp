@@ -48,14 +48,14 @@ public:
         for (int i = 0; i < bookCount; i++) {
             if (books[i]->getAuthor() == author) {
                 if (!found) {
-                    cout << "Найдені книги автора '" << author << "':" << endl;
+                    cout << "Author's books found '" << author << "':" << endl;
                     found = true;
                 }
-                cout << "Автор: " << books[i]->getAuthor() << ", Назва: " << books[i]->getTitle() << ", Видавництво: " << books[i]->getPublisher() << endl;
+                cout << "Author: " << books[i]->getAuthor() << ", Name: " << books[i]->getTitle() << ", publishing house: " << books[i]->getPublisher() << endl;
             }
         }
         if (!found) {
-            cout << "Книги автора '" << author << "' не найдені." << endl;
+            cout << "author's books '" << author << "' not found." << endl;
         }
     }
 
@@ -75,7 +75,7 @@ int main() {
     library.addBook(Book("Anton", "kykykyky", "vydavnictvo21424214", 2019, 250));
     library.addBook(Book("Vlad", "vojna i mir", "vydavnictvo0000", 2021, 350));
 
-    cout << "Введіть прізвище автора: ";
+    cout << "Input surname: ";
     string userInput;
     cin >> userInput;
 
